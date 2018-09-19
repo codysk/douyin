@@ -1,10 +1,10 @@
-# 抖音通信协议签名
+# 抖音通信2.7.0版本协议签名
 
 ## 简介
 
 通过抖音通信协议实现自动化爬取抖音视频，批量注册登录，点赞，评论, 视频下载上传等功能
 
-抖音通信协议支持抖音 iOS 2.0.0 - 2.6.0（最新） 版本协议，提供生成iOS设备信息功能，方便调用协议
+抖音通信协议支持抖音 iOS 2.7.0（最新）/2.0.0 版本协议，提供生成iOS设备信息功能，方便调用协议(其他版本协议请自测)
 
 提供生成签名服务，方便对抖音通信协议进行签名。签名参数: `as`, `mas`, `ts`
 
@@ -14,8 +14,8 @@
 通过调用API加签服务来完成获取新的设备信息及协议签名。
 
 实现过程:
-1. 通过访问 `https://api.appsign.vip:2688/token/douyin` 获取抖音加签token，有效期为60分钟
-2. 如果没有设备信息可以请求 `https://api.appsign.vip:2688/douyin/device/new` 获取新的设备信息，包括install_id, vid, device_id, openudid 等， 设备信息为永久使用
+1. 通过访问 `https://api.appsign.vip:2688/token/douyin/version/2.7.0` 获取抖音协议2.7.0的加签token，其他版本如2.0.0，修改version后面的版本号，如果不添加/version/<版本号>参数，默认版本号为最新版本有效期为60分钟
+2. 如果没有设备信息可以请求 `https://api.appsign.vip:2688/douyin/device/new/version/2.7.0` 获取新的设备信息，包括install_id, vid, device_id, openudid 等， 设备信息为永久使用，版本号参考token获取中的版本号设置
 3. 有了设备信息和加签Token， 需要通过参数构造加签字符串，调用 `https://api.appsign.vip:2688/sign` 完成参数的加签
 
 ---
@@ -26,7 +26,8 @@
 ## API参数
 1. 获取抖音加签Token
 ```
-https://api.appsign.vip:2688/token/douyin
+https://api.appsign.vip:2688/token/douyin  # 默认版本为最新
+https://api.appsign.vip:2688/token/douyin/version/2.7.0
 ```
 ```
 {
@@ -37,7 +38,8 @@ https://api.appsign.vip:2688/token/douyin
 
 2. 生成新的设备属性
 ```
-https://api.appsign.vip:2688/douyin/device/new
+https://api.appsign.vip:2688/douyin/device/new  # 默认版本为最新
+https://api.appsign.vip:2688/douyin/device/new/version/2.7.0
 ```
 ```
 {
@@ -82,6 +84,15 @@ https://api.appsign.vip:2688/sign
 针对不同版本的抖音，可以使用如下版本信息：
 ```
 APPINFO = {
+    "version_code": "2.7.0",
+    "app_version": "2.7.0",
+    "channel": "App%20Stroe",
+    "app_name": "aweme",
+    "build_number": "27014",
+    "aid": "1128",
+}
+
+APPINFO = {
     "version_code": "2.0.0",
     "channel": "pp",
     "app_name": "aweme",
@@ -122,3 +133,8 @@ APPINFO = {
 * [ ] 评论
 * [ ] 视频下载
 * [ ] 视频上传
+
+
+## 更新
+
+* 2018.09.19 更新支持最新版2.7.0协议，同时兼容之前2.0.0版本协议
