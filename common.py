@@ -4,27 +4,29 @@ import requests
 
 API = "https://api.appsign.vip:2688"
 APPINFO = {
-    "version_code": "2.0.0",
+    "version_code": "2.7.0",
+    "app_version": "2.7.0",
     "channel": "App%20Stroe",
     "app_name": "aweme",
-    "build_number": "20005",
-    "app_version": "2.0.0",
+    "build_number": "27014",
     "aid": "1128",
 }
 header = {
-    "User-Agent": "Aweme/2.0.0 (iPhone; iOS 11.0; Scale/2.00)"
+    "User-Agent": "Aweme/2.7.0 (iPhone; iOS 11.0; Scale/2.00)"
 }
 
 # 获取Token       有效期60分钟
 def getToken():
-    resp = requests.get(API + "/token/douyin").json()
+    #resp = requests.get(API + "/token/douyin").json()
+    resp = requests.get(API + "/token/douyin/version/2.7.0").json()
     token = resp['token']
     print("Token: " + token)
     return token
 
 # 获取新的设备信息  有效期60分钟永久
 def getDevice():
-    resp = requests.get(API + "/douyin/device/new").json()
+    #resp = requests.get(API + "/douyin/device/new").json()
+    resp = requests.get(API + "/douyin/device/new/version/2.7.0").json()
     device_info = resp['data']
     print("设备信息: " + str(device_info))
     return device_info

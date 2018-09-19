@@ -116,7 +116,7 @@ APPINFO = {
 
 * [x] 爬取首页视频: `feed.py`
 * [x] 视频搜索: `search.py`
-* [x] 注册
+* [x] 注册 `register.py`
 * [ ] 登录
 * [ ] 点赞
 * [ ] 评论
