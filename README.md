@@ -14,13 +14,13 @@
 通过调用API加签服务来完成获取新的设备信息及协议签名。
 
 实现过程:
-1. 通过访问 `https://api.appsign.vip:2688/token/douyin/version/2.7.0` 获取抖音协议2.7.0的加签token，~~其他版本如2.6.0，修改version后面的版本号，如果不添加/version/<版本号>参数~~(暂不支持，有需要可以提issus)，默认版本号为最新版本，token有效期为60分钟
+1. 通过访问 `https://api.appsign.vip:2688/token/douyin/version/2.7.0` 获取抖音协议2.7.0的加签token，~~其他版本如2.6.0，修改version后面的版本号~~，如果不添加/version/<版本号>参数(暂不支持，有需要可以提issus)，默认版本号为最新版本，token有效期为60分钟
 2. 如果没有设备信息可以请求 `https://api.appsign.vip:2688/douyin/device/new/version/2.7.0` 获取新的设备信息，包括install_id, vid, device_id, openudid 等， 设备信息为永久使用，版本号参考token获取中的版本号设置
 3. 有了设备信息和加签Token， 需要通过参数构造加签字符串，调用 `https://api.appsign.vip:2688/sign` 完成参数的加签
 
 ---
 
-> token有效期为一个小时，支持多线程进行加签，token失效之前无效重复获取
+> token有效期为一个小时，支持多线程进行加签，token失效之前无需重复获取
 > 设备信息依据需要进行获取
 
 ## API参数
@@ -86,7 +86,7 @@ https://api.appsign.vip:2688/sign
 APPINFO = {
     "version_code": "2.7.0",
     "app_version": "2.7.0",
-    "channel": "App%20Stroe",
+    "channel": "App Stroe",
     "app_name": "aweme",
     "build_number": "27014",
     "aid": "1128",
@@ -103,7 +103,7 @@ APPINFO = {
 
 APPINFO = {
     "version_code": "2.5.1",
-    "channel": "App%20Store",
+    "channel": "App Store",
     "app_name": "aweme",
     "build_number": "25105",
     "app_version": "2.5.1",
@@ -112,7 +112,7 @@ APPINFO = {
 
 APPINFO = {
     "version_code": "2.6.0",
-    "channel": "App%20Store",
+    "channel": "App Store",
     "app_name": "aweme",
     "build_number": "26006",
     "app_version": "2.6.0",
@@ -131,7 +131,7 @@ APPINFO = {
 * [ ] 登录
 * [ ] 点赞
 * [ ] 评论
-* [ ] 视频下载
+* [x] 视频下载 无水印 `downloadVideo.py`
 * [ ] 视频上传
 
 
