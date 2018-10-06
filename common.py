@@ -11,8 +11,18 @@ APPINFO = {
     "build_number": "27014",
     "aid": "1128",
 }
+
+APPINFO = {
+    "version_code": "2.8.0",
+    "app_version": "2.8.0",
+    "channel": "App Stroe",
+    "app_name": "aweme",
+    "build_number": "28007",
+    "aid": "1128",
+}
+
 header = {
-    "User-Agent": "Aweme/2.7.0 (iPhone; iOS 11.0; Scale/2.00)"
+    "User-Agent": "Aweme/2.8.0 (iPhone; iOS 11.0; Scale/2.00)"
 }
 
 # 获取Token       有效期60分钟
