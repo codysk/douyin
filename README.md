@@ -154,8 +154,8 @@ APPINFO = {
 
 * [x] 爬取首页视频: `feed.py`
 * [x] 视频搜索: `search.py`
-* [x] 注册 `register.py`
-* [x] 登录 - QQ授权 `loginByQQ.py`
+* [x] 注册/登录 - 手机短信 `loginBySMS.py`
+* [x] 注册/登录登录 - QQ授权 `loginByQQ.py`
 * [ ] 点赞
 * [ ] 评论
 * [x] 视频下载 无水印 `downloadVideo.py`
