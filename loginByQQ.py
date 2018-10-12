@@ -3,9 +3,7 @@
 import requests
 from common import *
 """
-拉取首页视频
-Host: aweme.snssdk.com
-User-Agent: Aweme/2.7.0 (iPhone; iOS 9.0.1; Scale/2.00)
+QQ授权登录
 """
 
 # 获取Token       有效期60分钟
