@@ -14,6 +14,9 @@
 
 技术支持，商务合作 请联系: longhong288@outlook.com
 
+iOS协议手机抓包操作 参考: [在 iPhone 上利用 Charles 抓包](https://www.jianshu.com/p/8825179786ac)
+
+
 ## 使用说明
 通过调用API加签服务来完成获取新的设备信息及协议签名。
 
