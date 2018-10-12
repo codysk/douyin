@@ -21,6 +21,15 @@ APPINFO = {
     "aid": "1128",
 }
 
+APPINFO = {
+    "version_code": "2.9.1",
+    "app_version": "2.9.1",
+    "channel": "App Stroe",
+    "app_name": "aweme",
+    "build_number": "29101",
+    "aid": "1128",
+}
+
 header = {
     "User-Agent": "Aweme/2.8.0 (iPhone; iOS 11.0; Scale/2.00)"
 }
