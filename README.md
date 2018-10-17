@@ -163,6 +163,7 @@ APPINFO = {
 * [ ] 评论
 * [x] 视频下载 无水印 `downloadVideo.py`
 * [ ] 视频上传
+* [x] 拉取指定用户个人信息 `userInfo.py`
 
 
 ## 更新
