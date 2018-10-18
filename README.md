@@ -164,6 +164,7 @@ APPINFO = {
 * [x] 视频下载 无水印 `downloadVideo.py`
 * [ ] 视频上传
 * [x] 拉取指定用户个人信息 `userInfo.py`
+* [x] 拉取指定视频信息 `videoInfo.py`
 
 
 ## 更新
