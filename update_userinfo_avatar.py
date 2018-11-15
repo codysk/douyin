@@ -3,11 +3,8 @@
 import requests
 from common import *
 """
-更新用户信息
+更新用户信息 - 头像
 """
-
-keyword = u"美女"      # 搜索内容
-offset = "0"         # 偏移位置
 
 # 获取Token       有效期60分钟
 token = getToken()
