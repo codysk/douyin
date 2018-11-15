@@ -170,6 +170,9 @@ APPINFO = {
 * [ ] 视频上传
 * [x] 拉取指定用户个人信息 `userInfo.py`
 * [x] 拉取指定视频信息 `videoInfo.py`
+* [x] 更新用户信息 - 头像 `update_userinfo_avatar.py`
+* [x] 更新用户信息 - 昵称 `update_userinfo_nickname.py`
+* [x] 更新用户信息 - 签名 `update_userinfo_signature.py`
 
 
 ## 更新
